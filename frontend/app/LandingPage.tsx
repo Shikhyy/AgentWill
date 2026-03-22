@@ -198,7 +198,7 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
   )
 }
 
-function FloatingOrb({ size = 300, color = "#8b5cf6", position = "top-left", blur = 100, opacity = 0.15 }: {
+function FloatingOrb({ size = 300, color = "#f43f5e", position = "top-left", blur = 100, opacity = 0.15 }: {
   size?: number, color?: string, position?: string, blur?: number, opacity?: number
 }) {
   const positions: Record<string, string> = {
@@ -237,18 +237,18 @@ function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'glass py-3' : 'py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-lg shadow-violet-500/20 group-hover:shadow-violet-500/40 transition-shadow">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-600 to-orange-600 flex items-center justify-center shadow-lg shadow-rose-500/20 group-hover:shadow-rose-500/40 transition-shadow">
             <ShieldIcon className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold">AgentWill</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
-          <a href="#how-it-works" className="text-sm text-slate-400 hover:text-white transition-colors">How it Works</a>
-          <a href="#demo" className="text-sm text-slate-400 hover:text-white transition-colors">Demo</a>
+          <a href="#features" className="text-sm text-orange-400 hover:text-white transition-colors">Features</a>
+          <a href="#how-it-works" className="text-sm text-orange-400 hover:text-white transition-colors">How it Works</a>
+          <a href="#demo" className="text-sm text-orange-400 hover:text-white transition-colors">Demo</a>
           <a href="https://github.com/Shikhyy/AgentWill" target="_blank" rel="noopener noreferrer" 
-             className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
+             className="flex items-center gap-2 text-sm text-orange-400 hover:text-white transition-colors">
             <GithubIcon className="w-4 h-4" /> GitHub
           </a>
           <a href="#demo" className="btn-primary text-sm !py-2.5 !px-5">
@@ -277,17 +277,17 @@ function Navbar() {
 function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      <FloatingOrb size={600} color="#8b5cf6" position="top-left" blur={150} opacity={0.12} />
-      <FloatingOrb size={400} color="#3b82f6" position="top-right" blur={120} opacity={0.1} />
-      <FloatingOrb size={300} color="#06b6d4" position="bottom-left" blur={100} opacity={0.08} />
+      <FloatingOrb size={600} color="#f43f5e" position="top-left" blur={150} opacity={0.12} />
+      <FloatingOrb size={400} color="#f97316" position="top-right" blur={120} opacity={0.1} />
+      <FloatingOrb size={300} color="#f97316" position="bottom-left" blur={100} opacity={0.08} />
 
       <div className="scan-line" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-32 pb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/20 bg-violet-500/10 text-sm text-violet-300 mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-500/20 bg-rose-500/10 text-sm text-rose-300 mb-8 animate-fade-in">
           <ZapIcon className="w-4 h-4" />
           <span>Built for The Synthesis Hackathon</span>
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] animate-slide-up">
@@ -296,7 +296,7 @@ function HeroSection() {
           <span className="gradient-text">for AI Agents</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '150ms' }}>
+        <p className="text-lg md:text-xl text-orange-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '150ms' }}>
           Define exactly what your AI agent can spend, who it can interact with, and what it can reveal.
           Every action verifiable on Base. You stay in control.
         </p>
@@ -328,7 +328,7 @@ function HeroSection() {
 
         <div className="mt-20 animate-float">
           <div className="relative inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-blue-600 rounded-2xl blur-xl opacity-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-600 to-orange-600 rounded-2xl blur-xl opacity-20" />
             <div className="relative glass rounded-2xl p-6 max-w-2xl mx-auto">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-3 h-3 rounded-full bg-rose-400" />
@@ -337,13 +337,13 @@ function HeroSection() {
                 <span className="text-xs text-slate-500 ml-2 font-mono">agentwill.config.ts</span>
               </div>
               <pre className="text-left text-sm font-mono">
-                <code className="text-slate-400">{'{'}<br />
-                {'  '}spendingRules: {'{'} <span className="text-violet-400">dailyLimit</span>: <span className="text-emerald-400">"$1,000"</span>,{' '}<br />
-                {'    '}perTxLimit: <span className="text-emerald-400">"$100"</span>,{' '}<br />
-                {'    '}tokens: [<span className="text-emerald-400">"USDC"</span>]{'}'},<br />
-                {'  '}interactionRules: {'{'} <span className="text-blue-400">targets</span>: [<br />
-                {'    '}<span className="text-emerald-400">"0x2626...Uniswap"</span>,<br />
-                {'    '}<span className="text-emerald-400">"0x3312...Aerodrome"</span>,<br />
+                <code className="text-orange-400">{'{'}<br />
+                {'  '}spendingRules: {'{'} <span className="text-rose-400">dailyLimit</span>: <span className="text-amber-400">"$1,000"</span>,{' '}<br />
+                {'    '}perTxLimit: <span className="text-amber-400">"$100"</span>,{' '}<br />
+                {'    '}tokens: [<span className="text-amber-400">"USDC"</span>]{'}'},<br />
+                {'  '}interactionRules: {'{'} <span className="text-orange-400">targets</span>: [<br />
+                {'    '}<span className="text-amber-400">"0x2626...Uniswap"</span>,<br />
+                {'    '}<span className="text-amber-400">"0x3312...Aerodrome"</span>,<br />
                 {'  '}],
                 {'  '}privacy: <span className="text-yellow-400">"metadata_private"</span><br />
                 {'}'}
@@ -369,60 +369,60 @@ function FeaturesSection() {
       icon: <WalletIcon className="w-7 h-7" />,
       title: "Spending Controls",
       description: "Define per-token daily limits, per-transaction caps, and budget boundaries. Your agent can spend freely within limits.",
-      color: "violet",
+      color: "rose",
       code: "daily_limit: $1,000\nper_tx_limit: $100\ntokens: [USDC, ETH]",
     },
     {
       icon: <GlobeIcon className="w-7 h-7" />,
       title: "Interaction Rules",
       description: "Whitelist or blacklist specific contract addresses and function selectors. Control exactly what your agent can call.",
-      color: "blue",
+      color: "orange",
       code: "allow: UniswapRouter\nallow: Aerodrome\nblock: UnknownContract",
     },
     {
       icon: <LockIcon className="w-7 h-7" />,
       title: "Privacy Controls",
       description: "Choose what metadata your agent reveals on-chain. Keep spending patterns, contacts, and behavior private when needed.",
-      color: "cyan",
+      color: "amber",
       code: "reveal_metadata: false\nprivate_ledger: true\naudit_log: on_chain",
     },
     {
       icon: <ShieldIcon className="w-7 h-7" />,
       title: "On-Chain Verification",
       description: "Every agent action verified against rules before execution. All activity logged immutably on Base mainnet.",
-      color: "emerald",
+      color: "red",
       code: "verify(spending, $50)\n→ ✓ ALLOWED\n→ logged: 0x123...abc",
     },
     {
       icon: <BotIcon className="w-7 h-7" />,
       title: "ERC-8004 Identity",
       description: "Built for the ERC-8004 agent identity standard. Your agent gets a real on-chain identity it carries everywhere.",
-      color: "violet",
+      color: "orange",
       code: "agent_id: 0x8004...Base\nregistry: verified\nidentity: permanent",
     },
     {
       icon: <ActivityIcon className="w-7 h-7" />,
       title: "Activity Dashboard",
       description: "Monitor every agent action in real-time. See what was allowed, blocked, and why — all from a clean interface.",
-      color: "blue",
+      color: "amber",
       code: "12:34:05 → verify USDC $50\n✓ allowed (within limit)\n12:34:08 → swap ETH→USDC",
     },
   ]
 
   const colorClasses: Record<string, { bg: string, border: string, text: string, glow: string }> = {
-    violet: { bg: 'bg-violet-500/10', border: 'border-violet-500/30', text: 'text-violet-400', glow: 'shadow-violet-500/20' },
-    blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-400', glow: 'shadow-blue-500/20' },
-    cyan: { bg: 'bg-cyan-500/10', border: 'border-cyan-500/30', text: 'text-cyan-400', glow: 'shadow-cyan-500/20' },
-    emerald: { bg: 'bg-emerald-500/10', border: 'border-emerald-500/30', text: 'text-emerald-400', glow: 'shadow-emerald-500/20' },
+    rose: { bg: 'bg-rose-500/10', border: 'border-rose-500/30', text: 'text-rose-400', glow: 'shadow-rose-500/20' },
+    orange: { bg: 'bg-orange-500/10', border: 'border-orange-500/30', text: 'text-orange-400', glow: 'shadow-orange-500/20' },
+    amber: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-400', glow: 'shadow-amber-500/20' },
+    red: { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-400', glow: 'shadow-red-500/20' },
   }
 
   return (
     <section id="features" className="relative py-32 overflow-hidden">
-      <FloatingOrb size={400} color="#8b5cf6" position="top-right" blur={120} opacity={0.08} />
+      <FloatingOrb size={400} color="#f43f5e" position="top-right" blur={120} opacity={0.08} />
       
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-400 border border-violet-500/20 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20 mb-4">
             Features
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -430,7 +430,7 @@ function FeaturesSection() {
             <br />
             <span className="gradient-text">to stay accountable</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-orange-400 max-w-2xl mx-auto text-lg">
             AgentWill gives you the primitives that were missing — a trust layer between human intentions and autonomous agent actions.
           </p>
         </AnimatedSection>
@@ -445,7 +445,7 @@ function FeaturesSection() {
                     {feature.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3">{feature.title}</h3>
-                  <p className="text-sm text-slate-400 mb-5 leading-relaxed">{feature.description}</p>
+                  <p className="text-sm text-orange-400 mb-5 leading-relaxed">{feature.description}</p>
                   <div className="bg-[#0a0f1e] rounded-xl p-4 border border-white/5">
                     <pre className="text-xs font-mono text-slate-500 whitespace-pre-wrap leading-relaxed">
                       {feature.code}
@@ -491,23 +491,23 @@ function HowItWorksSection() {
 
   return (
     <section id="how-it-works" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-950/10 to-transparent" />
       
       <div className="relative max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-4">
             How it Works
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Simple by design
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-orange-400 max-w-2xl mx-auto text-lg">
             From rule definition to on-chain enforcement in minutes. No complex setup, no infrastructure to manage.
           </p>
         </AnimatedSection>
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rose-500/30 to-transparent -translate-y-1/2" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => (
@@ -515,7 +515,7 @@ function HowItWorksSection() {
                 <div className="glass rounded-2xl p-6 h-full card-hover relative z-10">
                   <div className="text-5xl font-black text-slate-800 mb-4">{step.number}</div>
                   <h3 className="text-lg font-bold mb-3">{step.title}</h3>
-                  <p className="text-sm text-slate-400 mb-3 leading-relaxed">{step.description}</p>
+                  <p className="text-sm text-orange-400 mb-3 leading-relaxed">{step.description}</p>
                   <p className="text-xs text-slate-500 leading-relaxed">{step.detail}</p>
                 </div>
               </AnimatedSection>
@@ -525,12 +525,12 @@ function HowItWorksSection() {
 
         <AnimatedSection delay={600} className="mt-20">
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-blue-600/20 rounded-3xl blur-2xl" />
-            <div className="relative glass rounded-3xl p-8 md:p-12 border border-violet-500/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-600/20 to-orange-600/20 rounded-3xl blur-2xl" />
+            <div className="relative glass rounded-3xl p-8 md:p-12 border border-rose-500/20">
               <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">The Missing Primitive</h3>
-                  <p className="text-slate-400 leading-relaxed mb-6">
+                  <p className="text-orange-400 leading-relaxed mb-6">
                     AI agents are already moving money and making commitments on behalf of humans. 
                     But there's no enforceable layer between a human's intentions and an agent's actions.
                     <br /><br />
@@ -538,17 +538,17 @@ function HowItWorksSection() {
                     and what it can't.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                    <span className="px-3 py-1 rounded-full text-xs bg-violet-500/10 text-violet-400 border border-violet-500/20">Spending Limits</span>
-                    <span className="px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20">Interaction Control</span>
-                    <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Privacy</span>
-                    <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">On-Chain Logs</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-rose-500/10 text-rose-400 border border-rose-500/20">Spending Limits</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-orange-500/10 text-orange-400 border border-orange-500/20">Interaction Control</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20">Privacy</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20">On-Chain Logs</span>
                   </div>
                 </div>
                 <div className="flex-shrink-0">
                   <div className="w-48 h-48 relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-600/30 to-blue-600/30 animate-pulse-glow" />
-                    <div className="absolute inset-4 rounded-full bg-gradient-to-br from-violet-600/40 to-blue-600/40" />
-                    <div className="absolute inset-8 rounded-full bg-gradient-to-br from-violet-600/50 to-blue-600/50 flex items-center justify-center">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-rose-600/30 to-orange-600/30 animate-pulse-glow" />
+                    <div className="absolute inset-4 rounded-full bg-gradient-to-br from-rose-600/40 to-orange-600/40" />
+                    <div className="absolute inset-8 rounded-full bg-gradient-to-br from-rose-600/50 to-orange-600/50 flex items-center justify-center">
                       <ShieldIcon className="w-12 h-12 text-white" />
                     </div>
                   </div>
@@ -572,7 +572,7 @@ function StatsSection() {
 
   return (
     <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-950/30 via-blue-950/30 to-violet-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-red-950/30 via-orange-950/30 to-red-950/30" />
       
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -619,23 +619,23 @@ function DemoSection() {
 
   return (
     <section id="demo" className="relative py-32 overflow-hidden">
-      <FloatingOrb size={500} color="#3b82f6" position="center" blur={150} opacity={0.06} />
+      <FloatingOrb size={500} color="#f97316" position="center" blur={150} opacity={0.06} />
       
       <div className="relative max-w-6xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4">
             Live Demo
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Create your rules
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-orange-400 max-w-2xl mx-auto text-lg">
             Try the AgentWill dashboard. Define rules, see them deploy, and watch verification in action.
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={200} className="max-w-4xl mx-auto">
-          <div className="glass rounded-3xl overflow-hidden border border-violet-500/20">
+          <div className="glass rounded-3xl overflow-hidden border border-rose-500/20">
             <div className="flex border-b border-white/5">
               {['create', 'manage'].map(tab => (
                 <button
@@ -643,7 +643,7 @@ function DemoSection() {
                   onClick={() => { setActiveTab(tab as 'create' | 'manage'); setSubmitted(false) }}
                   className={`flex-1 px-6 py-4 text-sm font-medium transition-all ${
                     activeTab === tab
-                      ? 'bg-violet-500/10 text-violet-400 border-b-2 border-violet-500'
+                      ? 'bg-rose-500/10 text-rose-400 border-b-2 border-rose-500'
                       : 'text-slate-500 hover:text-slate-300'
                   }`}
                 >
@@ -672,7 +672,7 @@ function DemoSection() {
                         <h4 className="font-semibold">Spending Rules</h4>
                         <p className="text-xs text-slate-500 mt-1">Define spending limits per token</p>
                       </div>
-                      <button onClick={addSpendingRule} className="text-xs text-violet-400 hover:text-violet-300 flex items-center gap-1">
+                      <button onClick={addSpendingRule} className="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1">
                         + Add Rule
                       </button>
                     </div>
@@ -710,7 +710,7 @@ function DemoSection() {
                             />
                           </div>
                           {spendingRules.length > 1 && (
-                            <button onClick={() => removeSpendingRule(i)} className="text-slate-500 hover:text-red-400 mt-5">
+                            <button onClick={() => removeSpendingRule(i)} className="text-slate-500 hover:text-orange-400 mt-5">
                               <XIcon className="w-4 h-4" />
                             </button>
                           )}
@@ -725,7 +725,7 @@ function DemoSection() {
                         <h4 className="font-semibold">Interaction Rules</h4>
                         <p className="text-xs text-slate-500 mt-1">Control contract interactions</p>
                       </div>
-                      <button onClick={addInteractionRule} className="text-xs text-violet-400 hover:text-violet-300 flex items-center gap-1">
+                      <button onClick={addInteractionRule} className="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1">
                         + Add Rule
                       </button>
                     </div>
@@ -749,7 +749,7 @@ function DemoSection() {
                             </button>
                           </div>
                           {interactionRules.length > 1 && (
-                            <button onClick={() => removeInteractionRule(i)} className="text-slate-500 hover:text-red-400">
+                            <button onClick={() => removeInteractionRule(i)} className="text-slate-500 hover:text-orange-400">
                               <XIcon className="w-4 h-4" />
                             </button>
                           )}
@@ -765,7 +765,7 @@ function DemoSection() {
                     </div>
                     <button
                       onClick={() => setRevealMetadata(!revealMetadata)}
-                      className={`w-14 h-7 rounded-full transition-colors relative ${revealMetadata ? 'bg-violet-600' : 'bg-slate-700'}`}
+                      className={`w-14 h-7 rounded-full transition-colors relative ${revealMetadata ? 'bg-rose-600' : 'bg-slate-700'}`}
                     >
                       <span className={`absolute top-0.5 w-6 h-6 bg-white rounded-full transition-all ${revealMetadata ? 'left-7' : 'left-0.5'}`} />
                     </button>
@@ -786,21 +786,21 @@ function DemoSection() {
 
               {activeTab === 'create' && submitted && (
                 <div className="text-center py-8">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <CheckIcon className="w-10 h-10 text-emerald-400" />
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-500/20 flex items-center justify-center">
+                    <CheckIcon className="w-10 h-10 text-amber-400" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">Rules Deployed!</h3>
-                  <p className="text-slate-400 mb-6 max-w-md mx-auto">
+                  <p className="text-orange-400 mb-6 max-w-md mx-auto">
                     Your rules have been deployed to Base mainnet. Your agent is now operating within the boundaries you defined.
                   </p>
                   <div className="bg-[#0a0f1e] rounded-xl p-4 mb-6 max-w-md mx-auto border border-white/5">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-xs text-slate-500">Transaction</span>
-                      <a href="#" className="text-xs text-violet-400 flex items-center gap-1">
+                      <a href="#" className="text-xs text-rose-400 flex items-center gap-1">
                         View on Basescan <ExternalLinkIcon className="w-3 h-3" />
                       </a>
                     </div>
-                    <code className="text-xs text-emerald-400 font-mono">0x7f3a...8c2d</code>
+                    <code className="text-xs text-amber-400 font-mono">0x7f3a...8c2d</code>
                   </div>
                   <button onClick={() => setSubmitted(false)} className="btn-secondary">
                     Deploy Another Rule Set
@@ -810,11 +810,11 @@ function DemoSection() {
 
               {activeTab === 'manage' && (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-slate-800/50 flex items-center justify-center">
-                    <ShieldIcon className="w-10 h-10 text-slate-600" />
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-900/50 flex items-center justify-center">
+                    <ShieldIcon className="w-10 h-10 text-amber-600" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-slate-400">Connect Wallet to Manage</h3>
-                  <p className="text-sm text-slate-600 max-w-sm mx-auto mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-orange-400">Connect Wallet to Manage</h3>
+                  <p className="text-sm text-amber-600 max-w-sm mx-auto mb-6">
                     Connect your wallet to view and manage your deployed rule sets.
                   </p>
                   <button className="btn-primary">
@@ -835,11 +835,11 @@ function DemoSection() {
 
 function TechStackSection() {
   const tech = [
-    { name: 'Solidity', desc: 'Smart Contracts', color: 'from-violet-500 to-purple-500' },
-    { name: 'Base', desc: 'Ethereum L2', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Solidity', desc: 'Smart Contracts', color: 'from-rose-500 to-orange-500' },
+    { name: 'Base', desc: 'Ethereum L2', color: 'from-blue-500 to-orange-500' },
     { name: 'Next.js', desc: 'Frontend', color: 'from-slate-300 to-slate-400' },
     { name: 'Foundry', desc: 'Testing', color: 'from-orange-500 to-yellow-500' },
-    { name: 'viem', desc: 'Ethereum Kit', color: 'from-violet-400 to-blue-400' },
+    { name: 'viem', desc: 'Ethereum Kit', color: 'from-rose-400 to-orange-400' },
     { name: 'ERC-8004', desc: 'Agent Identity', color: 'from-emerald-500 to-teal-500' },
   ]
 
@@ -886,7 +886,7 @@ function HackathonSection() {
       
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <AnimatedSection>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 text-amber-400 text-sm font-medium mb-6">
             <StarIcon className="w-4 h-4" />
             The Synthesis Hackathon 2026
           </div>
@@ -895,7 +895,7 @@ function HackathonSection() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {tracks.map((track, i) => (
-              <span key={i} className="px-3 py-1.5 rounded-lg text-sm bg-slate-800/50 border border-white/5 text-slate-400">
+              <span key={i} className="px-3 py-1.5 rounded-lg text-sm bg-orange-900/50 border border-white/5 text-orange-400">
                 {track}
               </span>
             ))}
@@ -915,7 +915,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-600 to-orange-600 flex items-center justify-center">
               <ShieldIcon className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -941,7 +941,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-amber-600">
           <span>© 2026 AgentWill. MIT License.</span>
           <span>Part of The Synthesis — Hackathon for AI Agents</span>
         </div>
