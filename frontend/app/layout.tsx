@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import LandingPage from './LandingPage'
+import { WalletProvider } from '@/components/Providers'
 
 export const metadata: Metadata = {
   title: 'AgentWill — On-Chain Rules for AI Agents',
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        {children}
+        <WalletProvider>{children}</WalletProvider>
       </body>
     </html>
   )
